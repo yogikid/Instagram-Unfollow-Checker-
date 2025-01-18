@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Unfollow Checker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="judul">Instagram Unfollow Checker</h1>
+        
+        <div class="upload-form">
+            <div class="form-group">
+                <label for="followers">Upload followers.json:</label>
+                <input type="file" id="followers" accept=".json">
+            </div>
+            <div class="form-group">
+                <label for="following">Upload following.json:</label>
+                <input type="file" id="following" accept=".json">
+            </div>
+            <button onclick="compareLists()" class="btn-primary">Cek Unfollow</button>
+        </div>
+
+        <div id="alert" class="alert" style="display: none;"></div>
+
+        <div id="resultTable" class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Username</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
